@@ -131,7 +131,7 @@ app.get('/user/:id', (req, res) => {
   // Your logic to retrieve user data based on the userId
   // ...
   if (logedin == "YES") {
-    res.redirect(`http://localhost:${process.env.PORT}/${pdfName}.pdf`);
+    res.redirect(`${process.env.URL}/${pdfName}.pdf`);
   }
 
 })
@@ -196,8 +196,9 @@ app.post("/Reset-Password", async function (req, res) {
       to: email,
       cc: "harshjain0461@gmail.com",
       subject: 'Password Reset',
-      text: `${process.env.TEXT}http://localhost:${process.env.PORT}/reset/${Token}\n\n`
+      text: `${process.env.TEXT}${process.env.URL}/reset/${Token}\n\n`
     };
+    // `${process.env.TEXT}http://localhost:${process.env.PORT}/reset/${Token}\n\n`
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
@@ -218,7 +219,6 @@ app.post("/contact", async function (req, res) {
     } else {
       let useremail = name;
       let message = req.body.message;
-      // console.log(name + " " + message);
       let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -236,10 +236,6 @@ app.post("/contact", async function (req, res) {
       await transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           console.log(error);
-        }
-        else {
-          // console.log("Email sent: " + info.response);
-
         }
       });
       res.redirect('/');
