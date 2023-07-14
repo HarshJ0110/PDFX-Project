@@ -1,0 +1,25 @@
+<%- include("header") -%>
+<div class="box">
+<div class="login-outer-container">
+    <div class="login-inner-container">
+        <form action="/reset/<%= resetToken %>" method="post">
+            <h1>Password</h1>
+            <p style="line-height: 6px; margin-bottom: 40px;"> Use our convertor tools</p>
+            <div class="your-input">
+                <div class="input">
+                    <input type="password" name="pass" id="email" required autocomplete="on"/>
+                    <label for="email">Password</label>
+                </div>
+                <div class="input">
+                    <input type="password" name="confpass" id="password" required />
+                    <label for="password">Confirm password</label>
+                </div>
+            </div>
+            <button type="submit" class="button btn login">Reset</button>
+    
+        </form>
+            
+    </div>
+</div>
+</div> 
+<%- include("footer") -%>

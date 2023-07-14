@@ -1,0 +1,28 @@
+<%- include("header") -%>
+    <div class="box">
+        <div class="profile-container">
+            <form action="/logout" method="get" class="profile-header2">
+                <label>
+                    <%= name.slice(0,9) %>
+                </label>
+                <button type="submit" class="button">Log out</button>
+            </form>
+            <div class="pdfs">
+                <% if (pdfPath.length !=0) { %>
+                    <% pdfPath.forEach((file,i)=> { %>
+                        <div class="pdfs-inner-container">
+                            <a href="/user/<%= file %>"><img src="/images/pdf-image.jpg" class="image" width="80vh"
+                                    height="" alt="pdf File"></a>
+                            <a href="/user/<%= file %>" class="image">File <%= i+1%></a>
+                        </div>
+                        <% }) %>
+
+
+                            <% } else { %>
+                                <p>No PDF data available.</p>
+                                <% } %>
+            </div>
+
+        </div>
+    </div>
+    <%- include("footer") -%>

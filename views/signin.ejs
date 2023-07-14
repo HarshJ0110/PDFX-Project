@@ -1,0 +1,32 @@
+<%- include("header") -%>
+<!-- <div class="signin-container"></div> -->
+<div class="box">
+    <div class="signin-container1">
+        <p style="font-size: 40px; "><strong>PdfX</strong></p>
+        <p style="font-size: 30px;">Convert docx file in pdf and merge pdf.</p>
+        <!-- <p style="font-size: 30px;">Compress and merge pdf.</p> -->
+    </div>
+    <div class="signin-container2">
+        <div class="signin-inner-container">
+            <form action="/signin" method="post">
+                <h1>Sign in</h1>
+                <p style="line-height: 12px; margin-bottom: 60px;"> Use our convertor tools</p>
+                <div class="your-input">
+                    <div class="input">
+                        <input type="email" name="username" id="email" required />
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" id="password" required minlength="8"/>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+            <button type="submit" class="button btn">Sign in</button>
+        </form >
+		    <div class="login-link" ><p>already have an account?<a href="/login"> Login</a></p></div>
+            <!-- <span style="color: #c68007;">OR</span> -->
+        </div>
+    </div>
+</div> 
+
+<%- include("footer") -%>

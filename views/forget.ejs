@@ -1,0 +1,31 @@
+<%- include("header") -%>
+<div class="box">
+<div class="login-outer-container">
+    <div class="login-inner-container">
+        <form action="/Reset-Password" method="post">
+            <h1>Email</h1>
+            <p style="line-height: 6px; margin-bottom: 80px;"> Use our convertor tools</p>
+            <div class="your-input" >
+                <div class="input">
+                    <input type="email" name="email" id="email" required autocomplete="on"/>
+                    <label for="email">Email</label>
+                </div>
+                <!-- <div class="input">
+                    <input type="password" name="password" id="password" required />
+                    <label for="password">Password</label>
+                </div> -->
+            </div>
+            <button type="submit" class="button btn login">Send Reset Link</button>
+    
+        </form>
+        <!-- <form action="/Reset-Email" method="get" class="forgot-password-link"></form>
+            Forgot Password?
+        </a>
+        <span style="color: #c68007; margin-top: 20px;">OR</span>
+        <div class="login-link"><p>create an account?<a href="/signin"> Sign in</a></div> -->
+        
+        
+    </div>
+</div>
+</div> 
+<%- include("footer") -%>
