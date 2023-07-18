@@ -97,7 +97,7 @@ app.get('/signin', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-  res.render("login", {port: process.env.PORT});
+  res.render("login", {URL: process.env.URL});
 })
 
 app.get("/Reset-Password", (req, res) => {
